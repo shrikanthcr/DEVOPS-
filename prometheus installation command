@@ -1,0 +1,9 @@
+#PROMETHEUS INSTALLATION COMMAND
+docker run -d -p 9090:9090 -v /home/ec2-user/prometheus:/etc/prometheus prom/prometheus
+#node exporter command
+docker run -d -p 9100:9100 quay.io/prometheus/node-exporter:v1.2.2
+
+
+#prometheus link
+https://prometheus.io/docs/prometheus/latest/installation/
+
