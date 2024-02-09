@@ -1,0 +1,11 @@
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+yum install fontconfig java-17-openjdk
+yum install jenkins
+amazon-linux-extras install epel
+java -version
+amazon-linux-extras install java-openjdk11
+service jenkins status
+service jenkins start
+service jenkins status
+cat /var/lib/jenkins/secrets/initialAdminPassword
