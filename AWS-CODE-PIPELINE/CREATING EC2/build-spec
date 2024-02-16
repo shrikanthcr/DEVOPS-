@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - yum install -y unzip
+      - curl -O https://releases.hashicorp.com/terraform/1.0.9/terraform_1.0.9_linux_amd64.zip
+      - unzip terraform_1.0.9_linux_amd64.zip
+      - mv terraform /usr/local/bin/
+  build:
+    commands:
+      - terraform init
+      - terraform plan
+      - terraform apply --auto-approve
