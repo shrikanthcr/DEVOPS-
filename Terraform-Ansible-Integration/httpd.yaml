@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: true
+  tasks:
+   - name: Install the latest version of Apache
+     ansible.builtin.yum:
+       name: httpd
+       state: latest
+
+   - name: Print message
+     debug:
+       msg: httpd insatlled
+
+   - name: start httpd
+     service:
+        name: httpd
+        state: started
